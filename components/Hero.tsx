@@ -55,14 +55,14 @@ export default function Hero() {
                         </Link>
                     </div>
 
-                    <div className="mt-12 flex items-center gap-6 text-sm text-slate-500">
+                    <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-500">
                         <div className="flex items-center gap-2">
                             <CheckCircle2 size={16} className="text-[var(--brand-blue)]" />
-                            <span>100% Humano</span>
+                            <span className="whitespace-nowrap">100% Humano</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <CheckCircle2 size={16} className="text-[var(--brand-blue)]" />
-                            <span>Cero IA</span>
+                            <span className="whitespace-nowrap">Cero IA</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <CheckCircle2 size={16} className="text-[var(--brand-blue)]" />

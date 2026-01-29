@@ -61,23 +61,41 @@ export default function International() {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4">
-                    {countries.map((country, index) => (
-                        <motion.div
-                            key={country.code}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.05 }}
-                            className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300"
-                        >
-                            <span className="text-3xl md:text-4xl mb-2" role="img" aria-label={`Bandera de ${country.name}`}>
-                                {country.flag}
-                            </span>
-                            <span className="text-xs md:text-sm font-medium text-slate-300">{country.name}</span>
-                        </motion.div>
-                    ))}
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black/40 backdrop-blur-sm"
+                >
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10" />
+
+                    {/* Pulsing Dots Overlay (Simulated) */}
+                    <div className="absolute inset-0 z-20">
+                        <span className="absolute top-[30%] left-[25%] w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-75" />
+                        <span className="absolute top-[35%] left-[20%] w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse" />
+                        <span className="absolute top-[28%] right-[25%] w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-700 opacity-75" />
+                        <span className="absolute top-[40%] right-[30%] w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse delay-300" />
+                        <span className="absolute bottom-[30%] left-[32%] w-1.5 h-1.5 bg-indigo-400 rounded-full animate-pulse delay-500" />
+                    </div>
+
+                    <img
+                        src="/world-map.png"
+                        alt="Mapa de Cobertura Global Mentary"
+                        className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700"
+                    />
+
+                    <div className="absolute bottom-0 left-0 right-0 p-6 z-30 flex justify-between items-end">
+                        <div className="text-xs md:text-sm font-mono text-cyan-400 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                            SYSTEM ONLINE
+                        </div>
+                        <div className="text-right">
+                            <div className="text-white font-bold text-lg md:text-xl">Red Global</div>
+                            <div className="text-slate-400 text-xs md:text-sm">+15 Países Alcanzados</div>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
