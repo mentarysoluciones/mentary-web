@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Globe2 } from "lucide-react";
+import WorldMap from "./WorldMap";
 
 const countries = [
     { code: "CO", name: "Colombia", flag: "🇨🇴" },
@@ -59,40 +60,35 @@ export default function International() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-none bg-transparent"
+                    className="relative w-full max-w-5xl mx-auto aspect-[1.7/1] rounded-2xl overflow-hidden shadow-none bg-transparent"
                 >
-                    <img
-                        src="/white-dotted-map.png"
-                        alt="Mapa de Cobertura Global Mentary"
-                        className="w-full h-full object-contain opacity-100"
-                    />
+                    <WorldMap className="w-full h-full text-slate-500" />
 
-                    {/* Country Markers */}
-                    {/* Coordinates are approximate percentages for a standard world map view */}
+                    {/* Country Markers - Re-aligned for the new SVG map projection */}
 
                     {/* Colombia */}
-                    <div className="absolute top-[58%] left-[29%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse"></div>
+                    <div className="absolute top-[58%] left-[28%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse"></div>
 
                     {/* México */}
-                    <div className="absolute top-[48%] left-[18%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+                    <div className="absolute top-[48%] left-[19%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.2s" }}></div>
 
                     {/* España */}
-                    <div className="absolute top-[35%] left-[48%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+                    <div className="absolute top-[34%] left-[49%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.4s" }}></div>
 
                     {/* Estados Unidos */}
-                    <div className="absolute top-[38%] left-[20%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.6s" }}></div>
+                    <div className="absolute top-[38%] left-[21%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.6s" }}></div>
 
                     {/* Ecuador */}
-                    <div className="absolute top-[60%] left-[28%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.8s" }}></div>
+                    <div className="absolute top-[61%] left-[27%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.8s" }}></div>
 
                     {/* Perú */}
-                    <div className="absolute top-[65%] left-[29%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.0s" }}></div>
+                    <div className="absolute top-[66%] left-[28%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.0s" }}></div>
 
                     {/* Chile */}
-                    <div className="absolute top-[78%] left-[30%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.2s" }}></div>
+                    <div className="absolute top-[80%] left-[29%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.2s" }}></div>
 
                     {/* Argentina */}
-                    <div className="absolute top-[76%] left-[33%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.4s" }}></div>
+                    <div className="absolute top-[78%] left-[32%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.4s" }}></div>
 
                     {/* Minimalist Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-8 z-30 flex justify-end items-end">
