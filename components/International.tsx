@@ -18,14 +18,7 @@ export default function International() {
     return (
         <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
             {/* Abstract Background */}
-            <div className="absolute inset-0 opacity-10">
-                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                        <circle cx="2" cy="2" r="1" fill="currentColor" />
-                    </pattern>
-                    <rect width="100" height="100" fill="url(#grid)" />
-                </svg>
-            </div>
+            {/* Abstract Background Removed */}
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
@@ -66,12 +59,12 @@ export default function International() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900/50"
+                    className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-none bg-transparent"
                 >
                     <img
                         src="/world-map-clean.png"
                         alt="Mapa de Cobertura Global Mentary"
-                        className="w-full h-full object-cover opacity-90"
+                        className="w-full h-full object-cover opacity-100"
                     />
 
                     {/* Minimalist Overlay */}

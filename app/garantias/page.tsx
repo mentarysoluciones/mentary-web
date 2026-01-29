@@ -50,7 +50,7 @@ export default function GuaranteesPage() {
 
                     <div className="prose prose-slate max-w-none hover:prose-a:text-[var(--brand-blue)]">
                         <h2>5. Política de Reembolsos</h2>
-                        <p>Ofrecemos un sistema de reembolsos basado en la calificación obtenida (plazo máx. 15 días después de recibir la nota):</p>
+                        <p>Ofrecemos un sistema de reembolsos basado en la calificación obtenida (plazo máx. 15 días después de recibir el trabajo por parte de nosotros):</p>
 
                         <div className="overflow-x-auto">
                             <table className="min-w-full text-left text-sm whitespace-nowrap">
