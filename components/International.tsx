@@ -1,103 +1,119 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe2 } from "lucide-react";
-import WorldMap from "./WorldMap";
-
-const countries = [
-    { code: "CO", name: "Colombia", flag: "🇨🇴" },
-    { code: "MX", name: "México", flag: "🇲🇽" },
-    { code: "ES", name: "España", flag: "🇪🇸" },
-    { code: "US", name: "Estados Unidos", flag: "🇺🇸" },
-    { code: "EC", name: "Ecuador", flag: "🇪🇨" },
-    { code: "PE", name: "Perú", flag: "🇵🇪" },
-    { code: "CL", name: "Chile", flag: "🇨🇱" },
-    { code: "AR", name: "Argentina", flag: "🇦🇷" },
-];
+import { Globe2, FileCheck, Clock, Award } from "lucide-react";
 
 export default function International() {
     return (
-        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
-            {/* Abstract Background */}
-            {/* Abstract Background Removed */}
+        <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+            {/* Background Gradients */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold mb-6"
-                    >
-                        <Globe2 size={18} />
-                        <span>Cobertura Global</span>
-                    </motion.div>
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-3xl md:text-5xl font-bold mb-6"
-                    >
-                        Sin Fronteras. <br />
-                        <span className="text-[var(--brand-blue)]">Excelencia Internacional.</span>
-                    </motion.h2>
+                    {/* Left Column: Text Content */}
+                    <div className="text-left">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold mb-8"
+                        >
+                            <Globe2 size={18} />
+                            <span>Alcance Mundial</span>
+                        </motion.div>
 
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto"
-                    >
-                        Nuestros expertos entienden los estándares académicos de múltiples países, asegurando que tu trabajo cumpla con las normativas locales (APA, Harvard, IEEE, etc.).
-                    </motion.p>
-                </div>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+                        >
+                            Tu Tesis <br />
+                            <span className="text-[var(--brand-blue)]">Sin Fronteras.</span>
+                        </motion.h2>
 
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                    className="relative w-full max-w-5xl mx-auto aspect-[1.7/1] rounded-2xl overflow-hidden shadow-none bg-transparent"
-                >
-                    <WorldMap className="w-full h-full text-slate-500" />
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="text-slate-400 text-lg max-w-xl mb-8 leading-relaxed"
+                        >
+                            No importa dónde estudies. Nuestros expertos dominan los estándares académicos de Latinoamérica, España y USA, garantizando cumplimiento normativo al 100%.
+                        </motion.p>
 
-                    {/* Country Markers - Re-aligned for the new SVG map projection */}
-
-                    {/* Colombia */}
-                    <div className="absolute top-[58%] left-[28%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse"></div>
-
-                    {/* México */}
-                    <div className="absolute top-[48%] left-[19%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.2s" }}></div>
-
-                    {/* España */}
-                    <div className="absolute top-[34%] left-[49%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.4s" }}></div>
-
-                    {/* Estados Unidos */}
-                    <div className="absolute top-[38%] left-[21%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.6s" }}></div>
-
-                    {/* Ecuador */}
-                    <div className="absolute top-[61%] left-[27%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.8s" }}></div>
-
-                    {/* Perú */}
-                    <div className="absolute top-[66%] left-[28%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.0s" }}></div>
-
-                    {/* Chile */}
-                    <div className="absolute top-[80%] left-[29%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.2s" }}></div>
-
-                    {/* Argentina */}
-                    <div className="absolute top-[78%] left-[32%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.4s" }}></div>
-
-                    {/* Minimalist Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-8 z-30 flex justify-end items-end">
-                        <div className="text-right">
-                            <div className="text-white font-bold text-lg md:text-xl tracking-tight">Red Global</div>
-                            <div className="text-slate-300 text-sm font-medium">+15 Países Alcanzados</div>
-                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="flex flex-wrap gap-4"
+                        >
+                            {/* Badges */}
+                            {["APA 7", "Harvard", "Vancouver", "IEEE", "Chicago"].map((norm, i) => (
+                                <span key={i} className="px-3 py-1 rounded-md bg-slate-800 border border-slate-700 text-slate-300 text-sm font-medium">
+                                    {norm}
+                                </span>
+                            ))}
+                        </motion.div>
                     </div>
-                </motion.div>
+
+                    {/* Right Column: Premium Stats Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {/* Card 1: Countries */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors duration-300 sm:col-span-2"
+                        >
+                            <div className="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-4 text-blue-400">
+                                <Globe2 size={24} />
+                            </div>
+                            <div className="text-4xl font-bold text-white mb-2">15+</div>
+                            <div className="text-lg font-semibold text-slate-200 mb-1">Países Cubiertos</div>
+                            <p className="text-slate-400 text-sm">Desde México hasta Argentina, incluyendo España y USA.</p>
+                        </motion.div>
+
+                        {/* Card 2: Standards */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors duration-300"
+                        >
+                            <div className="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-4 text-purple-400">
+                                <FileCheck size={24} />
+                            </div>
+                            <div className="text-3xl font-bold text-white mb-2">100%</div>
+                            <div className="text-base font-semibold text-slate-200">Normativa</div>
+                            <p className="text-slate-400 text-xs mt-2">Adaptación perfecta a tu guía de estilo.</p>
+                        </motion.div>
+
+                        {/* Card 3: Support */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4 }}
+                            className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors duration-300"
+                        >
+                            <div className="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-4 text-emerald-400">
+                                <Award size={24} />
+                            </div>
+                            <div className="text-3xl font-bold text-white mb-2">Top 1%</div>
+                            <div className="text-base font-semibold text-slate-200">Talento</div>
+                            <p className="text-slate-400 text-xs mt-2">Redactores seleccionados rigurosamente.</p>
+                        </motion.div>
+                    </div>
+
+                </div>
             </div>
         </section>
     );
