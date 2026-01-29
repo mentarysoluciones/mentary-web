@@ -19,9 +19,14 @@ export default function Hero() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-[var(--brand-blue)] text-xs font-bold uppercase tracking-wider mb-6">
-                        <span className="w-2 h-2 rounded-full bg-[var(--brand-blue)] animate-pulse" />
-                        Asesoría Académica Premium
+                    <div className="inline-flex flex-wrap items-center gap-3 mb-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-[var(--brand-blue)] text-xs font-bold uppercase tracking-wider">
+                            <span className="w-2 h-2 rounded-full bg-[var(--brand-blue)] animate-pulse" />
+                            Asesoría Académica Premium
+                        </div>
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider border border-slate-200">
+                            🌎 Cobertura Internacional
+                        </div>
                     </div>
 
                     <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6">
