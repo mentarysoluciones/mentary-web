@@ -18,8 +18,9 @@ export default function Hero() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
+                    className="text-center lg:text-left"
                 >
-                    <div className="inline-flex flex-wrap items-center gap-3 mb-6">
+                    <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-6">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-[var(--brand-blue)] text-xs font-bold uppercase tracking-wider">
                             <span className="w-2 h-2 rounded-full bg-[var(--brand-blue)] animate-pulse" />
                             Asesoría Premium
@@ -34,11 +35,11 @@ export default function Hero() {
                         <span className="text-[var(--brand-blue)]">Al Máximo.</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
+                    <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-lg leading-relaxed mx-auto lg:mx-0">
                         Expertos académicos dedicados a tu éxito. Tesis, ensayos y proyectos con garantía de originalidad y excelencia.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a
                             href="https://wa.me/573334318264"
                             target="_blank"
@@ -55,7 +56,7 @@ export default function Hero() {
                         </Link>
                     </div>
 
-                    <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-500">
+                    <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-3 text-sm text-slate-500">
                         <div className="flex items-center gap-2">
                             <CheckCircle2 size={16} className="text-[var(--brand-blue)]" />
                             <span className="whitespace-nowrap">100% Humano</span>
