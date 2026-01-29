@@ -62,37 +62,23 @@ export default function International() {
                 </div>
 
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black/40 backdrop-blur-sm"
+                    className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900/50"
                 >
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10" />
-
-                    {/* Pulsing Dots Overlay (Simulated) */}
-                    <div className="absolute inset-0 z-20">
-                        <span className="absolute top-[30%] left-[25%] w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-75" />
-                        <span className="absolute top-[35%] left-[20%] w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse" />
-                        <span className="absolute top-[28%] right-[25%] w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-700 opacity-75" />
-                        <span className="absolute top-[40%] right-[30%] w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse delay-300" />
-                        <span className="absolute bottom-[30%] left-[32%] w-1.5 h-1.5 bg-indigo-400 rounded-full animate-pulse delay-500" />
-                    </div>
-
                     <img
-                        src="/world-map.png"
+                        src="/world-map-clean.png"
                         alt="Mapa de Cobertura Global Mentary"
-                        className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700"
+                        className="w-full h-full object-cover opacity-90"
                     />
 
-                    <div className="absolute bottom-0 left-0 right-0 p-6 z-30 flex justify-between items-end">
-                        <div className="text-xs md:text-sm font-mono text-cyan-400 flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            SYSTEM ONLINE
-                        </div>
+                    {/* Minimalist Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-8 z-30 flex justify-end items-end bg-gradient-to-t from-slate-900/80 to-transparent">
                         <div className="text-right">
-                            <div className="text-white font-bold text-lg md:text-xl">Red Global</div>
-                            <div className="text-slate-400 text-xs md:text-sm">+15 Países Alcanzados</div>
+                            <div className="text-white font-bold text-lg md:text-xl tracking-tight">Red Global</div>
+                            <div className="text-slate-300 text-sm font-medium">+15 Países Alcanzados</div>
                         </div>
                     </div>
                 </motion.div>
