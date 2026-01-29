@@ -20,10 +20,10 @@ export default function Services() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div className="max-w-xl">
-                        <span className="text-[var(--brand-blue)] font-semibold tracking-wider text-sm uppercase mb-2 block">
+                        <span className="text-[var(--brand-blue)] font-semibold tracking-wider text-xs md:text-sm uppercase mb-2 block">
                             Nuestras Especialidades
                         </span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900">
                             Cubrimos Todas las Áreas Académicas
                         </h2>
                     </div>

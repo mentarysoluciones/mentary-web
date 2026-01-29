@@ -55,13 +55,13 @@ export default function International() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-slate-400 text-lg max-w-2xl mx-auto"
+                        className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto"
                     >
                         Nuestros expertos entienden los estándares académicos de múltiples países, asegurando que tu trabajo cumpla con las normativas locales (APA, Harvard, IEEE, etc.).
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4">
                     {countries.map((country, index) => (
                         <motion.div
                             key={country.code}
@@ -69,12 +69,12 @@ export default function International() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.05 }}
-                            className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300"
+                            className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300"
                         >
-                            <span className="text-4xl mb-2" role="img" aria-label={`Bandera de ${country.name}`}>
+                            <span className="text-3xl md:text-4xl mb-2" role="img" aria-label={`Bandera de ${country.name}`}>
                                 {country.flag}
                             </span>
-                            <span className="text-sm font-medium text-slate-300">{country.name}</span>
+                            <span className="text-xs md:text-sm font-medium text-slate-300">{country.name}</span>
                         </motion.div>
                     ))}
                 </div>

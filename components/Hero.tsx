@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <section className="relative pt-24 pb-16 lg:pt-48 lg:pb-32 overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50 to-transparent -z-10 opacity-60" />
             <div className="absolute top-20 right-20 w-96 h-96 bg-[var(--brand-blue)] rounded-full blur-[120px] opacity-20 -z-10" />
@@ -22,19 +22,19 @@ export default function Hero() {
                     <div className="inline-flex flex-wrap items-center gap-3 mb-6">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-[var(--brand-blue)] text-xs font-bold uppercase tracking-wider">
                             <span className="w-2 h-2 rounded-full bg-[var(--brand-blue)] animate-pulse" />
-                            Asesoría Académica Premium
+                            Asesoría Premium
                         </div>
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider border border-slate-200">
                             🌎 Cobertura Internacional
                         </div>
                     </div>
 
-                    <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6">
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6">
                         Tus Notas <br />
                         <span className="text-[var(--brand-blue)]">Al Máximo.</span>
                     </h1>
 
-                    <p className="text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
+                    <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
                         Expertos académicos dedicados a tu éxito. Tesis, ensayos y proyectos con garantía de originalidad y excelencia.
                     </p>
 
