@@ -62,13 +62,40 @@ export default function International() {
                     className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-none bg-transparent"
                 >
                     <img
-                        src="/world-map-clean.png"
+                        src="/white-dotted-map.png"
                         alt="Mapa de Cobertura Global Mentary"
-                        className="w-full h-full object-cover opacity-100"
+                        className="w-full h-full object-contain opacity-100"
                     />
 
+                    {/* Country Markers */}
+                    {/* Coordinates are approximate percentages for a standard world map view */}
+
+                    {/* Colombia */}
+                    <div className="absolute top-[58%] left-[29%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse"></div>
+
+                    {/* México */}
+                    <div className="absolute top-[48%] left-[18%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+
+                    {/* España */}
+                    <div className="absolute top-[35%] left-[48%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+
+                    {/* Estados Unidos */}
+                    <div className="absolute top-[38%] left-[20%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.6s" }}></div>
+
+                    {/* Ecuador */}
+                    <div className="absolute top-[60%] left-[28%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "0.8s" }}></div>
+
+                    {/* Perú */}
+                    <div className="absolute top-[65%] left-[29%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.0s" }}></div>
+
+                    {/* Chile */}
+                    <div className="absolute top-[78%] left-[30%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.2s" }}></div>
+
+                    {/* Argentina */}
+                    <div className="absolute top-[76%] left-[33%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_2px_rgba(96,165,250,0.8)] animate-pulse" style={{ animationDelay: "1.4s" }}></div>
+
                     {/* Minimalist Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-8 z-30 flex justify-end items-end bg-gradient-to-t from-slate-900/80 to-transparent">
+                    <div className="absolute bottom-0 left-0 right-0 p-8 z-30 flex justify-end items-end">
                         <div className="text-right">
                             <div className="text-white font-bold text-lg md:text-xl tracking-tight">Red Global</div>
                             <div className="text-slate-300 text-sm font-medium">+15 Países Alcanzados</div>
